@@ -1,0 +1,27 @@
+*{
+    font-family: 'Poppins', sans-serif !important;
+    color:#414141;
+  }
+  .margin-top{
+    margin-top: 5%;
+  }
+  .container{
+    padding:50px;
+  }
+  .alert{
+    color:red !important;
+    padding-left: 0px;
+  }
+  hr{
+  border-top: 1px solid #FF8C00!important;
+  }
+  .responsive-img{
+    width:100%;
+    height:auto;
+  }
+  @media screen and (max-width:767px)){
+    .is-content
+    {
+      display:contents;
+    }
+  }

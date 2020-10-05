@@ -1,0 +1,172 @@
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<body ng-app="app">
+    <div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1>Save Your account now</h1>
+        <h6>get your ultimate latest article.</h6>
+        <hr>
+        <div class="row">
+        
+        <div class="col">
+            <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" 
+            ngModel pattern="[a-zA-Z ]*"
+            name="firstname" 
+            [formControlName] = "'firstname'"
+            class="form-control" 
+            id="firstname"
+            placeholder="jhon"
+            required>
+            <div class="alert" role="alert" *ngIf="registerForm.get('firstname').hasError('required') && registerForm.get('firstname').touched">
+                First name Required!
+            </div>
+            <div class="alert" role="alert" *ngIf="registerForm.get('firstname').hasError('pattern')">
+                machine have version number not hooman!
+            </div>   
+            </div>
+
+            <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" 
+            [formControlName] = "'lastname'"
+            ngModel pattern="[a-zA-Z ]*"
+            name="lastname" 
+            class="form-control" 
+            id="lastname"
+            placeholder="jhon"
+            required>
+            <div class="alert" role="alert" *ngIf="registerForm.get('lastname').hasError('required') && registerForm.get('lastname').touched">
+                Last name Required!
+            </div>  
+            <div class="alert" role="alert" *ngIf="registerForm.get('lastname').hasError('pattern')">
+                machine have version number not hooman!
+            </div> 
+            </div>
+
+            <div class="form-group">
+            <label for="username">User Name</label>
+            <input type="text" 
+            [formControlName] = "'username'"
+            name="username" 
+            class="form-control" 
+            id="username"
+            placeholder="jhondoe"
+            required>
+            <div class="alert" role="alert" *ngIf="registerForm.get('username').hasError('required') && registerForm.get('username').touched">
+                User Name Required!
+            </div>  
+            </div>
+        
+            <div class="form-group">
+            <label for="number">Contact Number</label>
+            <input type="text" 
+            [formControlName] = "'number'"
+            name="number" 
+            class="form-control" 
+            id="number"
+            placeholder="78654128854"
+            maxlength="10"
+            required>
+            <div *ngIf="registerForm?.get('number')?.touched">
+                <div class="alert" role="alert" *ngIf="registerForm?.get('number')?.hasError('pattern')">
+                Invalid Contact Number
+                </div>
+            </div>  
+            <div class="alert" role="alert" *ngIf="registerForm?.get('number')?.hasError('required')">
+                You forgot to fill contact number!
+            </div> 
+            </div>
+
+            <div class="form-group">
+            <label for="linkedin">LinkedIn URL</label>
+            <input type="text" 
+            [formControlName] = "'linkedin'"
+            name="linkedin" 
+            class="form-control" 
+            id="linkedin"
+            placeholder="https://jhondoe/linkedin/profile/"
+            required>
+            </div>
+
+            <div class="form-group">
+            <label for="description">Self Description</label>
+            <input type="text" 
+            [formControlName] = "'description'"
+            name="description" 
+            class="form-control" 
+            id="description"
+            placeholder="I am cool ac ice **"
+            required>
+            <div class="alert" role="alert" *ngIf="registerForm.get('description').hasError('required') && registerForm.get('description').touched">
+                Self Description Required!
+            </div>  
+            </div>
+
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" 
+            [formControlName] = "'email'"
+            name="email"
+            class="form-control" 
+            placeholder="jhondoe@gmail.com" 
+            required email>
+            <div *ngIf="registerForm?.get('email')?.touched">
+                <div class="alert" *ngIf="registerForm?.get('email')?.hasError('required')">
+                Email Required!
+                </div>
+                <div class="alert" *ngIf="registerForm?.get('email')?.hasError('pattern')">
+                Email Pattern mismatch!
+                </div>
+            </div> 
+            </div>
+
+    
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" 
+            [formControlName] = "'password'"
+            ngModel pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"
+            class="form-control" 
+            name="password"
+            required>
+            <div *ngIf="registerForm?.get('password')?.touched">
+                <div class="alert" role="alert" *ngIf="registerForm?.get('password')?.hasError('required')">
+                Password Required!
+                </div>
+                <div class="alert" role="alert" *ngIf="registerForm?.get('password')?.hasError('pattern')">
+                password requires minimum 8 character. one upper-case, lower-case and number!
+                </div>    
+            </div> 
+        </div>
+
+        <div class="form-group">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password"
+            [formControlName] = "'confirmpassword'"
+            class="form-control" 
+            name="confirmpassword"
+            required> 
+        
+            <div *ngIf="registerForm?.get('confirmpassword')?.touched">
+                <div class="alert" role="alert" *ngIf="registerForm?.get('confirmpassword')?.hasError('required')">
+                Password Required!
+                </div>
+                <div class="alert" role="alert" *ngIf="registerForm?.get('confirmpassword')?.hasError('mismatch')">
+                password Mismatch!
+                </div>    
+            </div>
+        </div>
+        </div>
+            
+    
+        <div class="col is-content">
+        <img class="responsive-img" src="/assets/images/signup.svg" width="500" height="auto" alt="side image">
+        </div>
+    </div>
+    <hr>
+        <button type="submit" class="btn btn-warning" [disabled]="registerForm.invalid">Submit</button>
+        
+    </form>
+    </div>
+</body>

@@ -1,0 +1,31 @@
+*{
+    font-family: 'Poppins', sans-serif !important;
+    color:#414141;
+  }
+  .container{
+    padding:50px;
+  }
+  .alert{
+    color:red !important;
+    padding-left: 0px;
+  }
+  .alertsuccess{
+    color:green !important;
+    padding-left: 0px;
+  }
+  hr{
+    border-top: 1px solid #FF8C00!important;
+  }
+  .col-disabled{
+    flex-grow: 0;
+  }
+  .responsive-img{
+      width:100%;
+      height:auto;
+    }
+    @media screen and (max-width:767px){
+      .is-content
+      {
+        display:contents;
+      }
+    }

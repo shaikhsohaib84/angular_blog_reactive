@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h1>Welcome Back</h1>
+      <hr>
+
+      <div class="row">
+        <div class="col margin-top">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" 
+            name="email" 
+            [formControlName]="'email'"
+            class="form-control" 
+            id="email" 
+            placeholder="jhondoe@gmail.com"
+            required email>
+            <div *ngIf="loginForm.get('email').touched">
+              <div class="alert" role="alert" *ngIf="loginForm.get('email').hasError('pattern')">
+                  Invalid Email
+              </div>
+              <div class="alert" role="alert" *ngIf="loginForm.get('email').hasError('required')">
+                Email Required
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" 
+            class="form-control"
+            [formControlName]="'password'" 
+            name="password"
+            id="password"
+            required >
+            <div class="alert" *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
+            <!-- password requires minimum 8 character. one upper-case, lower-case and number! -->
+            password required
+            </div>
+          </div>
+        </div>
+        <div class="col is-content">
+          <img class = "responsive-img" src="/assets/images/signin.svg"  width="500" height="auto" alt="side image">
+        </div>
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-warning" [disabled]="loginForm.invalid">Submit</button>
+    </form>
+  </div>
