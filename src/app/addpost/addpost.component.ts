@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-addpost',
@@ -8,12 +8,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AddpostComponent implements OnInit {
   addPostForm : FormGroup;
-  constructor() { }
+
+  constructor(private formBuilder: FormBuilder) { 
+    this.addPostForm = this.formBuilder.group({
+      title: ['', [Validators.required]],
+      content: ['', [Validators.required]]
+    })
+  }
 
   ngOnInit(): void {
   }
 
-  addpost(){
-
+  addPost(){
+    
   }
 }

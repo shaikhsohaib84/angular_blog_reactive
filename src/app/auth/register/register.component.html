@@ -73,7 +73,7 @@
                 Invalid Contact Number
                 </div>
             </div>  
-            <div class="alert" role="alert" *ngIf="registerForm?.get('number')?.hasError('required')">
+            <div class="alert" role="alert" *ngIf="registerForm?.get('number')?.touched && registerForm?.get('number')?.hasError('required')">
                 You forgot to fill contact number!
             </div> 
             </div>

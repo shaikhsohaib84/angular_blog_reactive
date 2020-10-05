@@ -8,10 +8,8 @@
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" 
-            name="email" 
             [formControlName]="'email'"
-            class="form-control" 
-            id="email" 
+            class="form-control"
             placeholder="jhondoe@gmail.com"
             required email>
             <div *ngIf="loginForm.get('email').touched">
@@ -28,12 +26,9 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" 
             class="form-control"
-            [formControlName]="'password'" 
-            name="password"
-            id="password"
+            [formControlName]="'password'"
             required >
             <div class="alert" *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
-            <!-- password requires minimum 8 character. one upper-case, lower-case and number! -->
             password required
             </div>
           </div>
