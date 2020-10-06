@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   loginPayLoad: LoginPayLoad;
 
   constructor(private formBuilder: FormBuilder,private authService: AuthService, private router: Router) {
+    
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]],
       password: ['', [Validators.required]]
@@ -30,16 +31,18 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
+    /** we assign the login form email and password value to payload email and password */
     this.loginPayLoad.email = this.loginForm.get('email').value;
     this.loginPayLoad.password = this.loginForm.get('password').value;
-    console.log(this.loginPayLoad);
+
+    /*console.log(this.loginPayLoad);*/
 
      this.authService.login(this.loginPayLoad).subscribe(data => {
       console.log(data);
       this.router.navigateByUrl("/");
 
     }, error => {
-      alert('Unsuccessful');
+      alert('Email or Password does not match');
     });
   }
 }
