@@ -34,7 +34,7 @@
             name="lastname" 
             class="form-control" 
             id="lastname"
-            placeholder="jhon"
+            placeholder="doe"
             required>
             <div class="alert" role="alert" *ngIf="registerForm.get('lastname').hasError('required') && registerForm.get('lastname').touched">
                 Last name Required!
@@ -162,7 +162,7 @@
         </div>
     </div>
     <hr>
-        <button type="submit" class="btn btn-warning" [disabled]="registerForm.invalid">Submit</button>
+        <button type="submit" class="btn btn-warning mt-4 example_f" [disabled]="registerForm.invalid"><span>Submit</span></button>
         
     </form>
     </div>

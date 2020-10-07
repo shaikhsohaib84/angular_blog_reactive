@@ -31,8 +31,14 @@ export class AuthService {
     return this.httpClient.post(this.baseUrl + 'user/signup', registerPayLoad, { headers:headers });
   }
 
+  //this function will authenticate whether user has logged in or not
   isAuthenticated(): boolean {
     return this.localStorageService.retrieve('loginData') != null;
+  }
+
+  //clear the user session/data
+  logout(){
+    this.localStorageService.clear('loginData');
   }
 
 }

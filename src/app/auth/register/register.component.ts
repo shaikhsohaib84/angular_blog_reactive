@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
       first_name: '',
       last_name: '',
       username: '',
-      contact_number: '',
+      contact: '',
       linkedin_url: '',
       description: '',
       status: 'ACTIVE',
@@ -55,15 +55,14 @@ export class RegisterComponent implements OnInit {
     this.registerPayLoad.username  = this.registerForm.get('username').value;    
     this.registerPayLoad.email  = this.registerForm.get('email') .value;
     this.registerPayLoad.password  = this.registerForm.get('password') .value;
-    this.registerPayLoad.contact_number  = this.registerForm.get('number') .value;
+    this.registerPayLoad.contact  = this.registerForm.get('number') .value;
     this.registerPayLoad.linkedin_url  = this.registerForm.get('linkedin') .value;
     this.registerPayLoad.description  = this.registerForm.get('description') .value;
     console.log(this.registerPayLoad);
     
     this.authService.register(this.registerPayLoad).subscribe(data =>{
-      console.log("from data ->>>"+data);
       alert("SignUp Successfull");
-      this.router.navigateByUrl("/");
+      this.router.navigateByUrl("/login");
     }, error => {
       alert("SignUp Failed");
     });
