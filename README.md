@@ -4,6 +4,31 @@
 
 One of the most effective ways to build brand awareness, while providing relevant and useful content to your target audience is through consistent blogging. Blogging is an inexpensive way for small businesses to drive traffic to their site, enhance inbound marketing efforts and attract more perspective customers..
 
+## scope of the system (refer from sample synopsis through outlook mail)
+
+
+## Database 
+
+MySQL WorkBench
+
+## Tools 
+
+VS Code, 
+
+PyCharm, 
+
+Postman, 
+
+MySQL workbench
+
+## Frontend
+
+Angular
+
+## Backend
+
+Django
+
 ## Installation
 
 This project was generated with Angular CLI version 10.0.0 and Django 3.1.0
@@ -30,4 +55,3 @@ Run "python manage.py runserver" for a dev server. Navigate to http://localhost:
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
