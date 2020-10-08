@@ -13,6 +13,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AddpostComponent } from './addpost/addpost.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     RegisterComponent,
     AddpostComponent,
-    HomeComponent
+    HomeComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { HomeComponent } from './home/home.component';
       {path:'home', component:HomeComponent},
       {path:'login', component:LoginComponent},
       {path:'register', component:RegisterComponent},
-      {path:'addpost', component:AddpostComponent}
+      {path:'addpost', component:AddpostComponent},
+      {path:'post/:id', component:PostComponent}
     ])
   ],
   providers: [],
