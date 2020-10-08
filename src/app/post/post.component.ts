@@ -14,6 +14,7 @@ export class PostComponent implements OnInit {
   postId: Number;
   
   posts: Observable<Array<PostPayLoad>>;
+
   constructor(private postService: PostService, private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
