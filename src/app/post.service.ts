@@ -21,7 +21,7 @@ export class PostService {
   }
 
   getPostList(getBlogPayLoad: GetBlogPayLoad): Observable<any>{
-    let headers: HttpHeaders = new HttpHeaders({ 'Content-Type ':'application/json' });
+    let headers: HttpHeaders = new HttpHeaders({ 'Content-Type':'application/json' });
     return this.httpClient.post(this.baseUrl + 'blog/getbloglist', getBlogPayLoad, { headers : headers});
   }
 }
