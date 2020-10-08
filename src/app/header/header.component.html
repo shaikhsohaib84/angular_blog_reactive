@@ -8,24 +8,41 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+    
       <!--signin / login-->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto"> 
-          <li class="nav-item"> 
-              <a class="nav-link" href="/addpost"> 
-                Post +
-              </a> 
-          </li>
-          <li class="nav-item"> 
-              <a class="nav-link" href="/login"> 
-                SignIn 
-              </a> 
-          </li> 
-          <li class="nav-item"> 
-              <a class="nav-link bg" href="/register"> 
-                SignUp 
-              </a> 
-          </li>  
-        </ul> 
-      </div>
+       
+          <div class="col-md-11" *ngIf="!authService.isAuthenticated()">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/login"> 
+                    SignIn 
+                  </a> 
+                </li> 
+                <li class="nav-item"> 
+                    <a class="nav-link bg" href="/register"> 
+                      SignUp 
+                    </a> 
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-11" *ngIf="authService.isAuthenticated()">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/addpost"> 
+                    Post +
+                  </a> 
+                </li> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/" (click)="logout()"> 
+                    LogOut
+                  </a> 
+                </li>
+              </ul>
+            </div>
+          </div>
     </nav>

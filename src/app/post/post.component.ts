@@ -13,7 +13,7 @@ import { PostPayLoad } from '../addpost/post-payload';
 export class PostComponent implements OnInit {
   postId: Number;
   
-  posts: Observable<Array<PostPayLoad>>;
+  public posts: Observable<Array<PostPayLoad>>;
 
   constructor(private postService: PostService, private activateRoute: ActivatedRoute) { }
 
