@@ -12,6 +12,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AddpostComponent } from './addpost/addpost.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
-    AddpostComponent
+    AddpostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     AppRoutingModule,
     NgxWebstorageModule.forRoot(),
     RouterModule.forRoot([
+      {path:'', component:HomeComponent},
+      {path:'home', component:HomeComponent},
       {path:'login', component:LoginComponent},
       {path:'register', component:RegisterComponent},
       {path:'addpost', component:AddpostComponent}
