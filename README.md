@@ -33,7 +33,7 @@ Django
 
 This project was generated with Angular CLI version 10.0.0 and Django 3.1.0
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) and [npm](https://www.npmjs.com/package/@angular/cli) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) and [npm](https://www.npmjs.com/package/@angular/cli) to install.
 
 ```Angular 
 npm install -g @angular/cli
