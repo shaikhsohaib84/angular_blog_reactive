@@ -338,3 +338,25 @@
 [1008/225647.892:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1008/225647.892:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1008/225647.892:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/230603.538:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/230603.554:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/230603.555:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/230603.555:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/230603.555:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/231147.960:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/231147.960:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/231147.960:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/231147.960:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1008/231147.960:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1010/144706.215:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1010/144706.242:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1010/144706.242:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1010/144706.242:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1010/144706.242:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/124228.277:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/124228.342:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/124228.342:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/124228.342:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1014/124228.422:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1016/183905.915:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1019/104640.566:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

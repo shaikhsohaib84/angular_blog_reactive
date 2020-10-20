@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public authService: AuthService, private router: Router) { }
+  u = this.localStorage.retrieve('loginData');
+  constructor(public authService: AuthService, private router: Router, public localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
   }
@@ -17,5 +19,15 @@ export class HeaderComponent implements OnInit {
   logout(){
     this.authService.logout();
     this.router.navigateByUrl("/");
+  }
+
+  deleteprofile(){
+    let d = this.localStorage.retrieve('loginData');
+    this.authService.deleteUser(d.id).subscribe((res:any)=>{
+          this.router.navigateByUrl('home')
+        }, error=>{
+          alert("unable to fetch record")
+        })
+        this.localStorage.clear('loginData');
   }
 }

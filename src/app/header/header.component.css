@@ -1,12 +1,18 @@
 *{
-    font-family: 'Poppins', sans-serif !important;
-    color:#f6f6f6 !important;
-  }
-  .navbar-nav{
-    font-size:1.3rem!important;
-  }
-  .bg{
-    color: #ffffff!important;
-    background-color: darkorange;
-    border-radius: 15px;
-  }
+  font-family: 'Poppins', sans-serif !important;
+  color:#f6f6f6 !important;
+}
+.navbar-nav{
+  font-size:1.3rem!important;
+}
+.bg{
+  color: #ffffff!important;
+  background-color: darkorange;
+  border-radius: 15px;
+}
+.modal.show{
+  display: block;
+}
+.modal-body, .modal-title, #close-color{
+  color:#343A40 !important;
+}

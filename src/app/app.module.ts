@@ -14,6 +14,7 @@ import { AddpostComponent } from './addpost/addpost.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PostComponent } from './post/post.component';
     RegisterComponent,
     AddpostComponent,
     HomeComponent,
-    PostComponent
+    PostComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { PostComponent } from './post/post.component';
       {path:'login', component:LoginComponent},
       {path:'register', component:RegisterComponent},
       {path:'addpost', component:AddpostComponent},
-      {path:'post/:id', component:PostComponent}
+      {path:'post/:id', component:PostComponent},
+      {path:'update-profile', component:UpdateProfileComponent}
     ])
   ],
   providers: [],

@@ -13,9 +13,9 @@ import { PostPayLoad } from '../addpost/post-payload';
 export class PostComponent implements OnInit {
   postId: Number;
   
-  public posts: Observable<Array<PostPayLoad>>;
+  posts: Observable<Array<PostPayLoad>>;
 
-  constructor(private postService: PostService, private activateRoute: ActivatedRoute) { }
+  constructor(public postService: PostService, private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(param => {
@@ -24,7 +24,7 @@ export class PostComponent implements OnInit {
     console.log(this.postId);
 
     this.postService.getPostById(this.postId).subscribe((res:any) => {
-      this.posts = res[0];
+      this.posts = res;
       console.log(this.posts);
     }, error => {
       alert("unable to fetch rec");

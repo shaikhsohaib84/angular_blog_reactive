@@ -2,9 +2,10 @@
     <div class="container">
         <div>
             <br>
-            <h3>{{posts.title}}</h3>
-            <p [innerHTML]="posts.content"></p>
-            <em class="author"><strong>Author:</strong> {{posts.first_name}} | {{posts.email}}</em>
+            <h3 [innerHTML]="posts[0].title"></h3>
+            <p [innerHTML]="posts[0].content"></p>
+            <!-- <p>{{posts[0].content}}</p> -->
+            <em class="author"><strong>Author:</strong> {{posts[0].first_name}} | {{posts[0].email}}</em>
             <hr>
             <a href="/" class="btn btn-warning mt-4 example_f"><span>Back</span></a>
         </div>

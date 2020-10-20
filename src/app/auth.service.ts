@@ -41,4 +41,13 @@ export class AuthService {
     this.localStorageService.clear('loginData');
   }
 
+  deleteUser(id:Number){
+    let headers: HttpHeaders = new HttpHeaders({'Content-Type':'application/json'});
+    return this.httpClient.delete(this.baseUrl + 'user/ userDelete/' + id, { headers:headers })
+  }
+
+  updateUser(UpdatePayLoad:RegisterPayLoad, id:Number):Observable<any>{
+    let headers: HttpHeaders = new HttpHeaders({'Content-Type':'application/json'});
+    return this.httpClient.patch(this.baseUrl + 'user/userupdate/' + id,UpdatePayLoad, { headers:headers })
+  }
 }
