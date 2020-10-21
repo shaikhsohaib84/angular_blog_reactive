@@ -41,13 +41,29 @@ export class AddpostComponent implements OnInit {
     this.postPayLoad.status = 'PUBLISHED';
     this.postPayLoad.user_id = this.localStorageService.retrieve('loginData').id;
     this.postPayLoad.first_name = this.localStorageService.retrieve('loginData').first_name;
-    // console.log("Post added "+this.postPayLoad);
+    console.log("Post added "+this.postPayLoad);
     //call api here
     this.postService.addPost(this.postPayLoad).subscribe(data => {
-      // console.log(data);
+      console.log(data);
       this.router.navigateByUrl("/");
     },error => {
       alert("blog post failed");
+    });
+  }
+
+  draftpost(){
+    this.postPayLoad.title = this.addPostForm.get('title').value;
+    this.postPayLoad.content = this.addPostForm.get('content').value;
+    this.postPayLoad.status = 'DRAFT';
+    this.postPayLoad.user_id = this.localStorageService.retrieve('loginData').id;
+    this.postPayLoad.first_name = this.localStorageService.retrieve('loginData').first_name;
+    // console.log("Post added "+this.postPayLoad);
+    //call api here
+    this.postService.addPost(this.postPayLoad).subscribe(data => {
+      console.log(data);
+      this.router.navigateByUrl("/");
+    },error => {
+      alert("draft failed");
     });
   }
 }

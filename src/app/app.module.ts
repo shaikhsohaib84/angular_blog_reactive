@@ -15,6 +15,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { DraftComponent } from './draft/draft.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     AddpostComponent,
     HomeComponent,
     PostComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    DraftComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
       {path:'register', component:RegisterComponent},
       {path:'addpost', component:AddpostComponent},
       {path:'post/:id', component:PostComponent},
-      {path:'update-profile', component:UpdateProfileComponent}
+      {path:'update-profile', component:UpdateProfileComponent},
+      {path:'draft',component:DraftComponent}
     ])
   ],
   providers: [],
